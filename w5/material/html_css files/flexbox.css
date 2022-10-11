@@ -1,0 +1,13 @@
+p {
+    font-family: "montserrat", sans-serif;
+    text-align: center;
+}
+.outer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.inner img {
+    height: 60vh;
+}

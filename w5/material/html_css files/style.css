@@ -1,0 +1,23 @@
+/* fonts */
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Selectors in HTML */
+p {
+    font-family: 'Montserrat', sans-serif;
+    color: blue
+}
+g{
+    font-family: 'Montserrat', sans-serif;
+    color: green
+}
+/* id selector */
+
+#idselect{
+    color: purple
+}
+.bloodtext{
+    color: red
+}

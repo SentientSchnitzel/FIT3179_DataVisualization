@@ -1,0 +1,17 @@
+.cases_t {
+    color: #2590c8;
+}
+.deaths_t {
+    color: #d13141;
+}
+
+h2 {
+    font-family: "Montserrat", sans-serif;
+}
+
+p {
+    font-family: "montserrat", sans-serif;
+}
+.center{
+    text-align: center;
+}
