@@ -1,27 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Forest area as a percentage of total land area",
-  "width": 400,
-  "height": 200,
+  "width": 500,
+  "height": 250,
   "projection": {"type": "equalEarth"},
   
   "data": {
     "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/DataViz2_clean/data/percent-forest-cover-copy.csv"
   },
-  "params": [
-    {
-      "name": "Year_select",
-      "value": 2020,
-      "bind": {
-        "input": "range",
-        "min": 1990,
-        "max": 2020,
-        "step": 1,
-        "name": "Year:  "
-      }
-    }
-  ],
-
   "layer":[
     {
       "data": {
@@ -51,7 +37,10 @@
             "as": "geo"
         },
         {
-          "filter": {"datum.Year == Year_select"}
+          "filter": {
+            "field": "Year",
+            "equal": 2020
+          }
         }
       ],
       "mark": {"type": "geoshape", "stroke": "white"},
@@ -60,9 +49,12 @@
         "color": {
           "field": "Forestcover",
           "type": "quantitative",
-          "title": "% forest cover",
-          "scale": {"type": "log", "range": ["#006d2c","#f7fcf5"]}
-          },
+          "scale": {
+            "type": "threshold",
+            "domain": [0, 25, 50, 75, 100],
+            "range": ["#f7fbff", "#deebf7", "#c6dbef", "#9ecae1", "#6baed6"]
+          }
+        },
         "tooltip": [
           {"field": "Country", "type": "nominal", "title": "Country"},
           {"field": "Forestcover", "type": "quantitative", "title": "Forest cover", "format": ".2f"}        
