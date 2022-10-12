@@ -8,14 +8,12 @@
   "data": {
     "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/DataViz2_clean/data/percent-forest-cover-copy.csv",
     "format": {"type": "csv"},
-    "transform": [
-      {"filter": {"field": "Year", "equal": 2000}}
-    ]
+    "parse": {"Year": "number"}
   },
   "params": [
     {
       "name": "Year_select",
-      "value": 2020,
+      "value": 2010,
       "bind": {
         "input": "range",
         "min": 1990,
@@ -54,6 +52,9 @@
             "key": "properties.NAME"
           },
           "as": "geo"
+        },
+        {
+          "filter": "datum.Year == Year_select"
         }
       ],
       "mark": {"type": "geoshape", "stroke": "white"},
