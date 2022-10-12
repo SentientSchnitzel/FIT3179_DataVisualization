@@ -6,7 +6,11 @@
   "projection": {"type": "equalEarth"},
   
   "data": {
-    "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/DataViz2_clean/data/percent-forest-cover-copy.csv"
+    "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/DataViz2_clean/data/percent-forest-cover-copy.csv",
+    "format": {"type": "csv"},
+    "transform": [
+      {"filter": {"field": "Year", "equal": 2000}}
+    ]
   },
   "params": [
     {
@@ -51,7 +55,6 @@
           },
           "as": "geo"
         }
-        {"filter": {"field": "Year", "equal": 2000}},
       ],
       "mark": {"type": "geoshape", "stroke": "white"},
       "encoding": {
