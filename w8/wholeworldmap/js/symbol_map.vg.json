@@ -8,7 +8,7 @@
       {
         "data": {
           "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/w8/wholeworldmap/js/name1.topojson",
-          "format": {"type": "topojson", "feature": "name2"}
+          "format": {"type": "topojson", "feature": "name1"}
         },
         "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
       },
