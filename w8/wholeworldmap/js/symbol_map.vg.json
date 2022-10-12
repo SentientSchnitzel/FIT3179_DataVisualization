@@ -7,8 +7,8 @@
     "layer": [
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/w8/wholeworldmap/js/wholeworldmap.topojson",
-          "format": {"type": "topojson", "feature": "wholeworldmap"}
+          "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/w8/wholeworldmap/js/worldmap.topojson",
+          "format": {"type": "topojson", "feature": "worldmap"}
         },
         "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
       },
