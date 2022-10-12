@@ -1,0 +1,7 @@
+Projection    MOLLWEIDE
+Units         METERS
+Zunits        NO
+Xshift        0.0
+Yshift        0.0
+Parameters    6370997.0  6370997.0
+   0  0  0.0 /* Longitude of projection center

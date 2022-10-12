@@ -1,0 +1,8 @@
+Projection    MOLLWEIDE                                                         
+Zunits        NO                                                                
+Units         METERS                                                            
+Spheroid      SPHERE                                                            
+Xshift        -11119487.4299999997                                              
+Yshift        -336410.8300000000                                                
+Parameters                                                                      
+-100  0  0.000 /* Longitude of projection center                                

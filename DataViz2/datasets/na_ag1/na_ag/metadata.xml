@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE metadata SYSTEM "http://www.fgdc.gov/metadata/fgdc-std-001-1998.dtd">
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>World Resources Institute</origin>
+				<pubdate>102502</pubdate>
+				<title>Pilot Analysis of Global Ecosystems: Grassland Ecosystems.  Agricultural Mosaics of Grasslands (North America)</title>
+				<geoform Sync="TRUE">raster digital data</geoform>
+				<pubinfo>
+					<pubplace>World Resources Institute, Washington D.C.</pubplace>
+					<publish>World Resources Institute</publish>
+				</pubinfo>
+				<othercit>R. White, S. Murray, and M. Rohweder.  Pilot Analysis of Global Ecosystems: Grassland Ecosystems. World Resources Institute, Washington DC.  November 2000.</othercit>
+				<onlink>http://forests.wri.org/pubs_dataset.cfm?PubID=3057</onlink>
+				<ftname Sync="TRUE">na_ag</ftname></citeinfo>
+		</citation>
+		<descript>
+			<abstract>This study, or Pilot Analysis of Global Ecosystems (PAGE), examines grassland ecosystems of the world using a large collection of spatial and temporal data.  We analyze datasets primarily at the global level, presenting quantitative indicators and qualitative information on the condition of the world's grasslands.  Grassland condition is defined in terms of current and future capacity of these ecosystems to provide goods and services important to humans.</abstract>
+			<purpose>The primary objective of the pilot analysis is to provide an over view of ecosystem condition at the global and continental level.  The analysis documents the extent and distribution of the five major ecosystem types and identifies ecosystem change over time. It analyzes the quantity and quality of ecosystem goods and services and, where data exist, reviews trends relevant to the production of these goods and services over the past 30 to 40 years.  Finally, PAGE attempts to assess the capacity of ecosystems to continue to provide goods and services, using measures of biological productivity, including soil and water conditions, biodiversity and land use.</purpose>
+			<supplinf>Interrupted Goodes Homolosine Projection, Units = meters
+PAGE Grasslands Ecosystems Map 5.  In this dataset, Value= 3 was used to display 30-40% agriculture, which was identified as "grassland and agriculture mosaic".  Use legend file "na_ag.avl" or display by value=3.  </supplinf>
+			<langdata Sync="TRUE">en</langdata></descript>
+		<timeperd>
+			<timeinfo>
+				<sngdate>
+					<caldate>unknown</caldate>
+				</sngdate>
+			</timeinfo>
+			<current>publication date</current>
+		</timeperd>
+		<status>
+			<progress>Complete</progress>
+			<update>None planned</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc Sync="TRUE">-179.919937</westbc>
+				<eastbc Sync="TRUE">179.963057</eastbc>
+				<northbc Sync="TRUE">78.597238</northbc>
+				<southbc Sync="TRUE">5.107589</southbc>
+			</bounding>
+			<lboundng><leftbc Sync="TRUE">-17359500.000000</leftbc><rightbc Sync="TRUE">-6030500.000000</rightbc><bottombc Sync="TRUE">630500.000000</bottombc><topbc Sync="TRUE">8423500.000000</topbc></lboundng></spdom>
+		<keywords>
+			<theme>
+				<themekt>Grasslands</themekt>
+				<themekey>Pilot Analysis of Global Ecosystems</themekey>
+				<themekey>Agricultural Mosaics</themekey>
+				<themekey>North America</themekey>
+				<themekey>Grasslands</themekey>
+				<themekey>Page Grasslands</themekey>
+			</theme>
+			<place>
+				<placekey>North America</placekey>
+				<placekey>Grasslands</placekey>
+			</place>
+		</keywords>
+		<accconst>None</accconst>
+		<useconst>Data set is not for use in litigation. While efforts have been made to ensure that these data are accurate and reliable within the state of the art, WRI, cannot assume liability for any damages, or misrepresentations, caused by any inaccuracies in the data, or as a result of the data to be used on a particular system. WRI makes no warranty, expressed or implied, nor does the fact of distribution constitute such a warranty.</useconst>
+		<ptcontac>
+			<cntinfo>
+				<cntperp>
+					<cntper>GIS lab Manager</cntper>
+					<cntorg>World Resources Institute</cntorg>
+				</cntperp>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>10 G Street NE Suite 800</address>
+					<city>Washington DC</city>
+					<state>Dsitrict of Columbia</state>
+					<postal>20002</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntvoice>202 729 7782</cntvoice>
+				<cntfax>202 729 7775</cntfax>
+				<cntemail>smenard@wri.org</cntemail>
+				<hours>9am -5pm EST</hours>
+			</cntinfo>
+		</ptcontac>
+		<native Sync="TRUE">Microsoft Windows 2000 Version 5.0 (Build 2195) Service Pack 3; ESRI ArcCatalog 8.2.0.700</native>
+		<crossref>
+			<citeinfo>
+				<title>Pilot Analysis of Global Ecosystems (PAGE) Characterization of Global Agroecosystems/ Page Forest Ecosystems</title>
+			</citeinfo>
+		</crossref>
+		<natvform Sync="TRUE">Raster Dataset</natvform></idinfo>
+	<dataqual>
+		<attracc>
+		</attracc>
+		<posacc>
+			<horizpa>
+			</horizpa>
+			<vertacc>
+			</vertacc>
+		</posacc>
+		<lineage>
+			<srcinfo>
+				<srccite>
+					<citeinfo>
+						<origin>GLCCD. 1998. Global Land Cover Characteristics Database, Version 1.2</origin>
+						<pubdate>1998</pubdate>
+						<pubtime>Unknown</pubtime>
+						<title>Global Land Cover Characteristics Database</title>
+						<geoform>raster digital data</geoform>
+						<pubinfo>
+						</pubinfo>
+						<othercit>GLCCD. 1998. Global Land Cover Characteristics Database, Version 1.2. See also Loveland, T.R., B.C. Reed, J.F. Brown, D.O. Ohlen, Z. Zhu, L. Yang, and J. Merchant. 2000. Development of a global land cover characteristics database and IGBP DISCover from 1-kilometer AVHRR data. International Journal of Remote Sensing 21[6-7]: 1303-1330</othercit>
+						<onlink>http://forests.wri.org/pubs_dataset.cfm?PubID=3057</onlink>
+					</citeinfo>
+				</srccite>
+				<typesrc>CDrom</typesrc>
+				<srctime>
+					<timeinfo>
+						<mdattim>
+							<sngdate>
+							</sngdate>
+							<sngdate>
+								<caldate></caldate>
+							</sngdate>
+						</mdattim>
+					</timeinfo>
+					<srccurr>ground condition</srccurr>
+				</srctime>
+			</srcinfo>
+			<procstep>
+				<procdesc>The  IGBP vegetation classes represent an aggregation of 917 seasonal land cover categories defined in the Global Land Cover Characeteristics Database. Using the AVHRR 1-km satellite data, WRI altered the PAGE classification for grasslands to highlight modification of grasslands by agricultural production.  Mapping units representing 30-40 percent agriculture are identified as "grassland and agriculture mosaic."
+
+PAGE area for agriculture is based directly on the SLRC map units.  The classification system used in the original SLRC map units allows for opportunities to improve the data interpretation for agricultural purposes, and improve upon the thematic maps generally presented at a global level which use the IGBP and Olson legends.  These global land cover interpretations do not explicitly recognize all occurrences of agriculture occupying a less than dominant share (60 percent) of a SLCR class.
+
+In consultation with the EROS Data Center at the U.S. Geological Survey, the potential agricultural content of all 961 SLCRs defined globally was reassessed.  For example, an area interpreted as containing more than 60 percent forest and classified as, say, "Deciduous broad-leaf forest" cover using the IGBP classification scheme might, upon closer inspection of its naming convention, contain an agricultural subcomponent (e.g., its detailed classification might describe it as "Deciduous broad-leaf forest with cropland"). The reassessment aimed to identify all such occurrences of agriculture, even when they occurred as minor cover components, although this was limited by the SLCR naming convention which did not identify an agricultural component if it occupied less than 30 percent of the SLCR region.
+
+This reassessment resulted in a global map with three primary agricultural cover categories showing agricultural area intensity at 30-40, 40-60, and greater than 60 percent agriculture. PAGE area for agriculture thus adds up all 1-km by 1-km cells of the land cover characteristics database for which agricultural area intensity is more than 30 percent.  Relative to the IGBP classification, the PAGE classification expands the geographic extent of agriculture by including areas where agriculture is not the dominant land cover.  In addition to the IGBP agricultural area, it includes about 6 percent of the IGBP forest area and 13 percent of the IGBP grassland area, as shown in the second column of this table.  Furthermore, PAGE area for agriculture includes urban areas (with at least 30 percent agriculture), because no explicit urban class was assigned in the SLRC map units.  This makes the PAGE agriculture area not directly comparable to the PAGE grassland and forest extent, which subtracted urban areas.
+
+The reinterpretation to obtain agricultural extent, however, does not address some weaknesses in the original land cover characteristics database, such as regional variations in the reliability of the satellite data interpretation, reflecting differences in the structure of land cover and in the availability of reliable groundtruthing data.  Specific agricultural land-cover types whose interpretation is considered to be problematic include; irrigated areas, permanently cropped areas (especially tree crops in forest margins), and extensive pastureland.  Similarly, the adjustments made to obtain a better estimate for urban areas do not overcome the intrinsic limitations of the original land cover characteristics database, namely the coarse resolution and lack of auxiliary data to fine tune the satellite image interpretation for selected regions, for example in Africa.  Therefore, all area estimates are most useful in depicting the relative size of broad ecosystem categories rather than providing an absolute estimate of the world's surface covered by trees, grasses, and other vegetation types.
+
+Data has been reclassed to represent 4 classes where:
+1 =  &gt; 60 % cropland
+2 = 40 - 60 % cropland
+3 = 30 - 40 % cropland
+4 = background</procdesc>
+			</procstep>
+		</lineage>
+	</dataqual>
+	<spdoinfo>
+		<direct Sync="TRUE">Raster</direct>
+		<ptvctinf>
+			<sdtsterm>
+				<sdtstype>Complete chain</sdtstype>
+				<ptvctcnt>1036</ptvctcnt>
+			</sdtsterm>
+			<sdtsterm>
+				<sdtstype>Label point</sdtstype>
+				<ptvctcnt>487</ptvctcnt>
+			</sdtsterm>
+			<sdtsterm>
+				<sdtstype>GT-polygon composed of chains</sdtstype>
+				<ptvctcnt>602</ptvctcnt>
+			</sdtsterm>
+			<sdtsterm>
+				<sdtstype>Point</sdtstype>
+				<ptvctcnt>633</ptvctcnt>
+			</sdtsterm>
+		</ptvctinf>
+		<rastinfo><rasttype Sync="TRUE">Grid Cell</rasttype><rowcount Sync="TRUE">7793</rowcount><colcount Sync="TRUE">11329</colcount><rastxsz Sync="TRUE">1000.000000</rastxsz><rastysz Sync="TRUE">1000.000000</rastysz><rastbpp Sync="TRUE">8</rastbpp><vrtcount Sync="TRUE">1</vrtcount><rastorig Sync="TRUE">Upper Left</rastorig><rastcmap Sync="TRUE">FALSE</rastcmap><rastcomp Sync="TRUE">Default</rastcomp><rastband Sync="TRUE">1</rastband><rastdtyp Sync="TRUE">matrix values</rastdtyp><rastplyr Sync="TRUE">FALSE</rastplyr><rastifor Sync="TRUE">ESRI GRID</rastifor></rastinfo></spdoinfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<planci>
+					<plance Sync="TRUE">row and column</plance>
+					<coordrep>
+						<absres Sync="TRUE">1000.000000</absres>
+						<ordres Sync="TRUE">1000.000000</ordres>
+					</coordrep>
+					<plandu Sync="TRUE">meters</plandu>
+				</planci>
+				<mapproj><mapprojn Sync="TRUE">Mollweide</mapprojn><mapprojp><longcm Sync="TRUE">0.000000</longcm><feast Sync="TRUE">0.000000</feast><fnorth Sync="TRUE">0.000000</fnorth></mapprojp></mapproj></planar>
+			<geodetic>
+				<horizdn Sync="TRUE">D_User_Defined</horizdn>
+				<ellips Sync="TRUE">User_Defined_Spheroid</ellips>
+				<semiaxis Sync="TRUE">6370997.000000</semiaxis>
+				<denflat Sync="TRUE">infinity</denflat>
+			</geodetic>
+			<cordsysn><geogcsn Sync="TRUE">GCS_User_Defined</geogcsn><projcsn Sync="TRUE">User_Defined_Mollweide</projcsn></cordsysn></horizsys>
+		<vertdef>
+			<altsys>
+				<altunits>meters</altunits>
+				<altenc>Attribute values</altenc>
+			</altsys>
+		</vertdef>
+	</spref>
+	<eainfo>
+		<detailed Name="na_ag">
+			<enttyp>
+				<enttypl Sync="TRUE">na_ag</enttypl>
+				<enttypt Sync="TRUE">Table</enttypt><enttypc Sync="TRUE">4</enttypc></enttyp>
+			<attr>
+				<attrlabl Sync="TRUE">ObjectID</attrlabl>
+				<attrdef Sync="TRUE">Internal feature number.</attrdef>
+				<attrdefs Sync="TRUE">ESRI</attrdefs>
+				<attrdomv>
+					<udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+				<attalias Sync="TRUE">ObjectID</attalias><attrtype Sync="TRUE">OID</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl Sync="TRUE">Value</attrlabl>
+				<attrdef>Feature geometry.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Coordinates defining the features.</udom>
+				</attrdomv>
+				<attalias Sync="TRUE">Value</attalias><attrtype Sync="TRUE">Integer</attrtype><attwidth Sync="TRUE">0</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl Sync="TRUE">Count</attrlabl>
+				<attrdef>Area of feature in internal units squared.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Positive real numbers that are automatically generated.</udom>
+				</attrdomv>
+				<attalias Sync="TRUE">Count</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">0</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+		</detailed>
+	</eainfo>
+	<distinfo>
+		<resdesc>Downloadable Data</resdesc>
+		<stdorder>
+			<digform>
+				<digtinfo>
+					<transize Sync="TRUE">3.934</transize>
+					<dssize Sync="TRUE">3.934</dssize></digtinfo>
+			</digform>
+		</stdorder>
+	</distinfo>
+	<metainfo>
+		<metd Sync="TRUE">20030813</metd>
+		<metc>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>World Resources Institute</cntorg>
+					<cntper>GIS Lab Manager</cntper>
+				</cntorgp>
+				<cntaddr>
+					<addrtype>10 G Street, NE Suite# 800</addrtype>
+					<city>Washington, DC</city>
+					<state>District of Columbia</state>
+					<postal>20002</postal>
+				</cntaddr>
+				<cntvoice>202 729 7600</cntvoice>
+				<cntfax>202 729 7775</cntfax>
+				<cntemail>smenard@wri.org</cntemail>
+			</cntinfo>
+		</metc>
+		<metstdn Sync="TRUE">FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv Sync="TRUE">FGDC-STD-001-1998</metstdv>
+		<mettc Sync="TRUE">local time</mettc>
+		<metextns>
+			<onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+			<metprof>ESRI Metadata Profile</metprof>
+		</metextns>
+		<langmeta Sync="TRUE">en</langmeta><metextns><onlink Sync="TRUE">http://www.esri.com/metadata/esriprof80.html</onlink><metprof Sync="TRUE">ESRI Metadata Profile</metprof></metextns></metainfo>
+	<Esri><ModDate>20030813</ModDate><ModTime>14182800</ModTime><MetaID>{4BA28C69-9614-4A09-8535-594535104026}</MetaID><CreaDate>20030812</CreaDate><CreaTime>14373600</CreaTime><SyncOnce>FALSE</SyncOnce><SyncDate>20030813</SyncDate><SyncTime>14182800</SyncTime></Esri><mdDateSt Sync="TRUE">20030813</mdDateSt><dataIdInfo><envirDesc Sync="TRUE">Microsoft Windows 2000 Version 5.0 (Build 2195) Service Pack 3; ESRI ArcCatalog 8.2.0.700</envirDesc><dataLang><languageCode Sync="TRUE" value="en"></languageCode></dataLang><idCitation><resTitle Sync="TRUE">na_ag</resTitle><presForm><PresFormCd Sync="TRUE" value="005"></PresFormCd></presForm></idCitation><spatRpType><SpatRepTypCd Sync="TRUE" value="002"></SpatRepTypCd></spatRpType><geoBox esriExtentType="native"><westBL Sync="TRUE">-17359500</westBL><eastBL Sync="TRUE">-6030500</eastBL><northBL Sync="TRUE">8423500</northBL><southBL Sync="TRUE">630500</southBL><exTypeCode Sync="TRUE">1</exTypeCode></geoBox><geoBox esriExtentType="decdegrees"><westBL Sync="TRUE">-179.919937</westBL><eastBL Sync="TRUE">179.963057</eastBL><northBL Sync="TRUE">78.597238</northBL><southBL Sync="TRUE">5.107589</southBL><exTypeCode Sync="TRUE">1</exTypeCode></geoBox></dataIdInfo><mdLang><languageCode Sync="TRUE" value="en"></languageCode></mdLang><mdStanName Sync="TRUE">ISO 19115 Geographic Information - Metadata</mdStanName><mdStanVer Sync="TRUE">DIS_ESRI1.0</mdStanVer><mdChar><CharSetCd Sync="TRUE" value="004"></CharSetCd></mdChar><mdHrLv><ScopeCd Sync="TRUE" value="005"></ScopeCd></mdHrLv><mdHrLvName Sync="TRUE">dataset</mdHrLvName><distInfo><distributor><distorTran><onLineSrc><orDesc Sync="TRUE">002</orDesc><linkage Sync="TRUE">file://\\W03365\C$\arctmp\temp\na_ag1\na_ag</linkage><protocol Sync="TRUE">Local Area Network</protocol></onLineSrc><transSize Sync="TRUE">3.934</transSize></distorTran><distorFormat><formatName Sync="TRUE">Raster Dataset</formatName></distorFormat></distributor></distInfo><refSysInfo><RefSystem><refSysID><identCode Sync="TRUE">User_Defined_Mollweide</identCode></refSysID></RefSystem></refSysInfo><spatRepInfo><GridSpatRep><numDims Sync="TRUE">2</numDims><axDimProps><Dimen><dimName><DimNameTypCd Sync="TRUE" value="002"></DimNameTypCd></dimName><dimSize Sync="TRUE">11329</dimSize><dimResol Sync="TRUE">1000</dimResol></Dimen><Dimen><dimName><DimNameTypCd Sync="TRUE" value="001"></DimNameTypCd></dimName><dimSize Sync="TRUE">7793</dimSize><dimResol Sync="TRUE">1000</dimResol></Dimen></axDimProps><cellGeo><CellGeoCd Sync="TRUE" value="002"></CellGeoCd></cellGeo><tranParaAv Sync="TRUE">1</tranParaAv></GridSpatRep></spatRepInfo></metadata>
