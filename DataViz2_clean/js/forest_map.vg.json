@@ -6,7 +6,7 @@
   "projection": {"type": "equalEarth"},
   
   "data": {
-    "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/w8/3_choropleth_map/data/percent-forest-cover-copy.csv"
+    "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/DataViz2_clean/data/percent-forest-cover-copy.csv"
   },
   "layer":[
     {
