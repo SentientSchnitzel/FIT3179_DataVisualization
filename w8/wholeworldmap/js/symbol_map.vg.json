@@ -16,7 +16,8 @@
         "data": {
           "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/w8/wholeworldmap/data/earthquakes.csv"
         },
-        "mark": {"type": "circle", "tooltip": {"content": "data"}},
+        "mark": {"type": "circle"}, 
+        
         "encoding": {
           "longitude": {"field": "longitude", "type": "quantitative"},
           "latitude": {"field": "latitude", "type": "quantitative"},
@@ -31,7 +32,13 @@
             "type": "quantitative",
             "title": "Depth in km",
             "scale": {"scheme": "reds"}
-          }
+          },
+          "tooltip": [
+            {"field": "mag"},
+            {"field": "depth"},
+            {"field": "place"},
+            {"field": "time", "type": "temporal", "title": "Time"}
+          ]
         }
       }
     ]
