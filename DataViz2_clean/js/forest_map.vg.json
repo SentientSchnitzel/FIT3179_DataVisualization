@@ -1,10 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Forest Area as a percentage of Total Land Area",
-  "projection": {"type": "equalEarth"},
   
   "data": {
-    "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/DataViz2_clean/data/percent-forest-cover-copy.csv",
+    "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/DataViz2_clean/data/percent-forest-cover_clean.csv",
     "format": {"type": "csv"}
   },
   "params": [
@@ -25,11 +24,11 @@
     {
       "width": 800,
       "height": 400,
-      
+      "projection": {"type": "equalEarth"},
       "layer":[
         {
           "data": {
-            "url": "https://raw.githubusercontent.com/JiazhouLiu/FIT3179/main/VegaLite/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
+            "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/DataViz2_clean/js/ne_110m_admin_0_countries.topojson",
             "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
           },
           "transform": [
@@ -90,7 +89,7 @@
               "field": "Forestcover", 
               "title": "Average Forest Cover (%)",
               "stack": "normalize",
-              "scale": {"domain": [26, 32]}
+              "scale": {"domain": [0, 40]}
             }
           }
         }
