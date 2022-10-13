@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "projection": {"type": "equalEarth"},
+  
+  "data": {
+    "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/DataViz2_clean/data/percent-forest-cover-copy.csv",
+    "format": {"type": "csv"}
+  },
+  "params": [
+    {
+      "name": "Year_select",
+      "value": 2010,
+      "bind": {
+        "input": "range",
+        "min": 1990,
+        "max": 2020,
+        "step": 1,
+        "name": "Year:  "
+      }
+    }
+  ],
+
+  
+  "layer":[
+    {
+      "transform": [{
+        "filter": "datum.Year == Year_select"
+      }],
+      "mark": {"type": "bar", "color": "green"},
+      "encoding": {
+        "x": {
+          "aggregate": "mean", 
+          "field": "Forestcover", 
+          "title": "Average Forest Cover (%)",
+          "stack": "normalize",
+          "scale": {"domain": [26, 32]}
+        }
+      }
+    }
+  ]
+}
