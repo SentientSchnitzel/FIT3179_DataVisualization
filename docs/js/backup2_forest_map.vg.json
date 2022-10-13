@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Forest area as a percentage of total land area",
+  "title": "Forest Area as a percentage of Total Land Area",
   "width": 800,
   "height": 400,
   "projection": {"type": "equalEarth"},
@@ -62,7 +62,7 @@
         "color": {
           "field": "Forestcover",
           "type": "quantitative",
-          "title": "% forest cover",
+          "title": "Forest Cover (%)",
           "scale": {"type": "linear", "range": ["#fec44f", "#006d2c"]}
           },
         "tooltip": [
