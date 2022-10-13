@@ -23,7 +23,7 @@
     }
   ],
 
-  "hconcat": [
+  "vconcat": [
     {
       "layer":[
         {
@@ -73,34 +73,6 @@
             ]
           }
         }
-      ]
-    },
-    {
-      "layer":[
-        "transform": [
-          {
-            "joinaggregate": [{
-              "op": "mean",
-              "field": "Forestcover",
-              "as": "avgCover"
-            }]
-          },
-          {
-            "mark": {"type": "bar", "color": "gray"},
-            "encoding": {
-              "shape": {"field": "geo", "type": "geojson"},
-              "color": {
-                "field": "Forestcover",
-                "type": "quantitative",
-                "title": "% forest cover",
-                "scale": {"type": "linear", "range": ["#fec44f", "#006d2c"]}
-                },
-              "tooltip": [
-                {"field": "Forestcover", "type": "quantitative", "title": "Forest cover", "format": ".2f"}        
-              ]
-            }
-          }
-        ]
       ]
     }
   ]
