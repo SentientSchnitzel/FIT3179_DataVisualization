@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Forest area as a percentage of total land area",
-  "width": 400,
-  "height": 200,
+  "width": 800,
+  "height": 400,
   "projection": {"type": "equalEarth"},
   
   "data": {
