@@ -63,7 +63,7 @@
           "field": "Forestcover",
           "type": "quantitative",
           "title": "% forest cover",
-          "scale": {"type": "log", "range": ["#fec44f", "#006d2c"]}
+          "scale": {"type": "linear", "range": ["#fec44f", "#006d2c"]}
           },
         "tooltip": [
           {"field": "Country", "type": "nominal", "title": "Country"},
