@@ -24,26 +24,6 @@
   "vconcat": [
     {
       "width": 800,
-      "layer":[
-        {
-          "transform": [{
-            "filter": "datum.Year == Year_select"
-          }],
-          "mark": {"type": "bar", "color": "green"},
-          "encoding": {
-            "x": {
-              "aggregate": "mean", 
-              "field": "Forestcover", 
-              "title": "Global Forest Cover (%)",
-              "stack": "normalize",
-              "scale": {"domain": [0, 40]}
-            }
-          }
-        }
-      ]
-    },
-    {
-      "width": 800,
       "height": 400,
       "projection": {"type": "equalEarth"},
       "layer":[
@@ -97,8 +77,26 @@
           }
         }
       ]
+    },
+    {
+      "width": 800,
+      "layer":[
+        {
+          "transform": [{
+            "filter": "datum.Year == Year_select"
+          }],
+          "mark": {"type": "bar", "color": "green"},
+          "encoding": {
+            "x": {
+              "aggregate": "mean", 
+              "field": "Forestcover", 
+              "title": "Global Forest Cover (%)",
+              "stack": "normalize",
+              "scale": {"domain": [0, 40]}
+            }
+          }
+        }
+      ]
     }
-    
-    
   ]
 }
