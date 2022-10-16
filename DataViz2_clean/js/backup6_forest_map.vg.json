@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {"text": "Forest Area as a percentage of Total Land Area", "anchor": "middle"},
+  "title": {"text": "Forest Area as a percentage of Total Land Area"},
   
   "data": {
     "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/docs/data/percent-forest-cover_clean.csv",
@@ -66,7 +66,7 @@
               "type": "quantitative",
               "title": "Forest Cover (%)",
               "scale": {
-                "type": "linear", "range": ["#feffe0", "#00441b"],
+                "type": "linear", "range": ["#fffbdf", "#00441b"],
                 "domain": [0,100]
               }
               },
@@ -85,23 +85,14 @@
           "transform": [{
             "filter": "datum.Year == Year_select"
           }],
-          "mark": {"type": "bar"},
+          "mark": {"type": "bar", "color": "green"},
           "encoding": {
             "x": {
               "aggregate": "mean", 
               "field": "Forestcover", 
               "title": "Global Forest Cover (%)",
               "stack": "normalize",
-              "scale": {"domain": [31, 35]}
-            },
-            "color": {
-              "aggregate": "mean",
-              "field": "Forestcover",
-              "scale": {
-                "type": "linear", "range": ["#feffe0", "#00441b"],
-                "domain": [32,34]
-              }
-
+              "scale": {"domain": [0, 40]}
             }
           }
         }
