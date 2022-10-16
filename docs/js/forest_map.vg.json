@@ -50,7 +50,7 @@
                   "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/w8/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
                   "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
                 },
-                "key": "properties.NAME_LONG"
+                "key": "properties.NAME"
               },
               "as": "geo"
             },
