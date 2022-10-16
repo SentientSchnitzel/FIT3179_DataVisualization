@@ -3,17 +3,17 @@
   "title": {"text": "Forest Area as a percentage of Total Land Area", "anchor": "middle"},
   
   "data": {
-    "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/docs/data/percent-forest-cover_clean.csv",
+    "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/docs/data/net-deforestation-in-trade_clean.csv",
     "format": {"type": "csv"}
   },
   "params": [
     {
       "name": "Year_select",
-      "value": 2010,
+      "value": 2005,
       "bind": {
         "input": "range",
-        "min": 1990,
-        "max": 2020,
+        "min": 2005,
+        "max": 2013,
         "step": 1,
         "name": "Year:  "
       }
@@ -62,47 +62,17 @@
           "encoding": {
             "shape": {"field": "geo", "type": "geojson"},
             "color": {
-              "field": "Forestcover",
+              "field": "net_traded_deforestation",
               "type": "quantitative",
-              "title": "Forest Cover (%)",
+              "title": "Net Traded Deforestation",
               "scale": {
-                "type": "linear", "range": ["#feffe0", "#00441b"],
-                "domain": [0,100]
+                "type": "linear", "range": ["#FFE069", "#69FF6D"]
               }
               },
             "tooltip": [
               {"field": "Country", "type": "nominal", "title": "Country"},
-              {"field": "Forestcover", "type": "quantitative", "title": "Forest cover", "format": ".2f"}        
+              {"field": "net_traded_deforestation", "type": "quantitative", "title": "Net Traded Deforestation", "format": ".0f"}        
             ]
-          }
-        }
-      ]
-    },
-    {
-      "width": 800,
-      "layer":[
-        {
-          "transform": [{
-            "filter": "datum.Year == Year_select"
-          }],
-          "mark": {"type": "bar"},
-          "encoding": {
-            "x": {
-              "aggregate": "mean", 
-              "field": "Forestcover", 
-              "title": "Global Forest Cover (%)",
-              "stack": "normalize",
-              "scale": {"domain": [31, 35]}
-            },
-            "color": {
-              "aggregate": "mean",
-              "field": "Forestcover",
-              "scale": {
-                "type": "linear", "range": ["#feffe0", "#00441b"],
-                "domain": [32,34]
-              }
-
-            }
           }
         }
       ]
