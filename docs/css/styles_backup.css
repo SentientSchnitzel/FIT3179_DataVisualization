@@ -1,0 +1,54 @@
+body {
+	background-color: rgb(197, 208, 189);
+}
+
+.frontpage {
+	width: 800px;
+	background-color: white;
+	margin: auto;
+	padding-top: 10px;
+	/* padding: 50px; */
+
+}
+
+.single_vis_container {
+	width: 600px;
+	margin: auto;
+}
+
+.graph {
+	width: 100%;
+	margin: auto;
+	padding: 10px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+
+.text-div {
+	position: relative;
+	/* width: 100%; */
+	top: 25px;
+	left: 25px;
+	right: 25px;
+	bottom: 25px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+
+.divider {
+	position: relative;
+	top: 50px;
+	left: 25px;
+	right: 25px;
+	bottom: 50px;
+}
+
+h1 {
+    text-align: center;
+    color: #00441b;
+    font-size: 40px;
+}
+
+/* p {
+	word-break: break-all;
+} */

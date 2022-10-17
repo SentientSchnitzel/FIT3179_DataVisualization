@@ -1,9 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {"text": "Forest Area as a percentage of Total Land Area", "anchor": "middle"},
   
   "width": "container",
-  "height": 300,
+  "height": 350,
 
   "data": {
     "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/docs/data/percent-forest-cover_clean.csv",
@@ -20,8 +19,7 @@
         "step": 1,
         "name": "Year:  "
       }
-    },
-    {"name": "box_w", "value": 400}
+    }
   ],
 
   "projection": {"type": "equalEarth"},
@@ -75,5 +73,12 @@
         ]
       }
     }
-  ]
+  ],
+  "config": {
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    }
+  }
 }

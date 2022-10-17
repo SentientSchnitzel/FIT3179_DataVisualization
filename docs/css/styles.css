@@ -1,12 +1,35 @@
 body {
-	background-color: rgb(197, 208, 189);
+	background-color: rgb(230, 230, 230);
 }
 
 .frontpage {
-	width: 800px;
-	background-color: white;
+	width: 700px;
+	background-color: rgb(255, 255, 255);
 	margin: auto;
-	padding: 50px;
+	/* padding: 50px; */
+}
+
+.whitepage {
+	width: 800px;
+	background-color: rgb(255, 255, 255);
+	margin: auto;
+	/* padding: 50px; */
+}
+
+h1 {
+	text-align: center;
+	color: #00441b;
+	font-size: 32px;
+}
+
+h2 {
+	text-align: center;
+	color: #00441b;
+	font-size: 20px;
+}
+
+p {
+	font-size: 12px;
 }
 
 .content_container {
@@ -32,18 +55,18 @@ body {
 	padding: 5px;
 }
 
-h1 {
-    text-align: center;
-    color: #00441b;
-    font-size: 40px;
-}
-
-h2 {
+.divider {
+	padding: 1px 0;
+	background-color: #333e37;
 	text-align: center;
-	color: #00441b;
-	font-size: 20px;
 }
 
-p {
-	font-size: 12px;
+#secHeader {
+	width: 100%;
+	color: white;
+}
+
+#map2 {
+	height: 100%;
+	width: 100%;
 }

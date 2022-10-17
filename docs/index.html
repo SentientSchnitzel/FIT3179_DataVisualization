@@ -17,61 +17,120 @@
 	<!-- CSS file -->
 	<link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
 
 </head>
 
 <body>
-	<h1>
-		Forest Cover
-	</h1>
-	<div class="pure-g">
-		<div class="pure-u-1-3">
-			<div id='text-div'>
-				<h2>Forest Cover on the retreat</h2>
-				<p>The annual European Backpacker Index, compiled by priceoftravel.com, is designed to help money-savy
-					travellers find the cheapest European cities and plan an accurate budget for when they visit.
-					<br> <br> Prices for most things like hostels, transportation and attractions are fixed and certain.
-					However, prices for a 'budget lunch' or a pint of beer can vary depending on where you go. The index
-					takes all of these factors into
-					account to calculate the approximate price of a day in each city, including an overnight stay at a
-					backpacker hostel.
-					<br> <br> Here we review the top five cheapest European cities, as featured on the 2018 Index.
-					Review the complete list of 59 cities at https://www.priceoftravel.com/1979/european-
-					backpacker-index/.
-				</p>
-			</div>
-		</div>
-		<div class="pure-u-2-3">
-			<div id="forest-map"></div>
+<div class="divider">
+	<h2 id="secHeader">Something about treeeeees</h2>
+</div>
+	<div class="whitepage">
 
-			<script type="text/javascript">
+		<div class="divider">
+			<h1 id="secHeader">Forest Cover</h1>
+		</div>
 
-				var spec2 = "js/forest_map.vg.json";
-				vegaEmbed('#forest-map', spec2).then(function (result) {
-					// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-				}).catch(console.error);
-			</script>
-			</div>
-		</div>
-	</div>
-	<div class="pure-g">
-		<div class="pure-u-1-3">
-			<div id="text-div">
-				Hey yo moffoes
-			</div>
-		</div>
-		<div class="pure-u-2-3">
-			<div id="graphs">
-				
-			<script type="text/javascript">
+		<div class="frontpage">
 
-				var spec2 = "js/deforest_export.vg.json";
-				vegaEmbed('#deforest_export', spec2).then(function (result) {
-					// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-				}).catch(console.error);
-			</script>
+			<!-- three columns of class text using pure-g -->
+			<div class="pure-g">
+				<div class="pure-u-md-1-3">
+					<div class="text">
+						<p>The visualization is interactive. You can zoom in and out on the y-axis and you can also pan.</p>
+					</div>
+				</div>
+				<div class="pure-u-md-1-3">
+					<div class="text">
+						<p>The visualization also shows a tooltip when you hover over a point.</p>
+					</div>
+				</div>
+				<div class="pure-u-md-1-3">
+					<div class="text">
+						<p>The visualization also shows a tooltip when you hover over a point.</p>
+					</div>
+				</div>
 			</div>
+			
+			<!-- forest cover % -->
+			<div id="map1", class="graph"></div>
+			
+			<!-- start grid grp -->
+			<div class="pure-g">
+				<div class="pure-u-1-3">
+					<div class="text">
+						<h2>Forest Cover on the retreat</h2>
+						<p>
+							The annual European Backpacker Index, compiled by priceoftravel.com, is designed to help money-savy
+							travellers find the cheapest European cities and plan an accurate budget for when they visit.
+							<br> <br> Prices for most things like hostels, transportation and attractions are fixed and certain.
+							However, prices for a 'budget lunch' or a pint of beer can vary depending on where you go. The index
+							takes all of these factors into
+							account to calculate the approximate price of a day in each city, including an overnight stay at a
+							backpacker hostel.
+							<br> <br> Here we review the top five cheapest European cities, as featured on the 2018 Index.
+							Review the complete list of 59 cities at https://www.priceoftravel.com/1979/european-
+							backpacker-index/.
+						</p>
+					</div>
+				</div>
+
+				<div class="pure-u-2-3">
+					<div id="map2", class="graph-2-3"></div>
+				</div>
+			</div>
+			<!-- end grid grp -->
 		</div>
+		<!-- break in frontpage -->
+			<div class="divider">
+				<h1 id="secHeader">Net trade deforestation</h1>
+			</div>
+			
+		<div class="frontpage">
+			<!-- three columns of class text using pure-g -->
+			<div class="pure-g">
+				<div class="pure-u-md-1-3">
+					<div class="text">
+						<p>The visualization is interactive. You can zoom in and out on the y-axis and you can also pan.</p>
+					</div>
+				</div>
+				<div class="pure-u-md-1-3">
+					<div class="text">
+						<p>The visualization also shows a tooltip when you hover over a point.</p>
+					</div>
+				</div>
+				<div class="pure-u-md-1-3">
+					<div class="text">
+						<p>The visualization also shows a tooltip when you hover over a point.</p>
+					</div>
+				</div>
+			</div>
+			<!-- end grid grp -->
+
+			<!-- deforestation map -->
+			<div id="map3", class="graph"></div>
+
+
+		</div>
+		<!-- end of frontpage -->
+		
+		
+		<script type="text/javascript">
+			var map1 = "js/forest_map.vg.json";
+			var map2 = "js/global_cover_temporal.vg.json";
+			var map3 = "js/deforest_export.vg.json";
+			// var  = "js/forest_map.vg.json";
+
+			vegaEmbed('#map1', map1, {"actions": false}).then(function (result) {
+			// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+			}).catch(console.error);
+
+			vegaEmbed('#map2', map2, {"actions": false}).then(function (result) {
+			}).catch(console.error);
+
+			vegaEmbed('#map3', map3, {"actions": false}).then(function (result) {
+			}).catch(console.error);			
+		</script>
 	</div>
 </body>
 

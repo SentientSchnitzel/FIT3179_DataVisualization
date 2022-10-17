@@ -1,0 +1,34 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {"text": "Temporal view of Forest Area as a percentage of Total Land Area", "anchor": "middle"},
+
+  "width": "container",
+  "height": "container",
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/docs/data/percent-forest-cover_clean.csv",
+    "format": {"type": "csv"}
+  },
+
+  "mark": {"type": "line", "color": "#488360"},
+  "encoding": {
+    "x": {
+      "field": "Year", 
+      "type": "temporal", 
+      "axis": {"tickCount": 9}
+    },
+    "y": {
+      "aggregate": "average", 
+      "field": "Forestcover", 
+      "type": "quantitative",
+      "scale": {"domain": [30,35]}
+    }
+  },
+  "config": {
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    }
+  }
+}
