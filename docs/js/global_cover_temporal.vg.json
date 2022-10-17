@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {"text": "Temporal view of Forest Area as a percentage of Total Land Area", "anchor": "middle"},
+  "title": {"text": ["Temporal view of Forest Area as a", "percentage of Total Land Area"], "anchor": "middle"},
 
   "width": "container",
   "height": "container",
