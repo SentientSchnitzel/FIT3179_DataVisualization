@@ -2,6 +2,9 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {"text": "Forest Area as a percentage of Total Land Area", "anchor": "middle"},
   
+  "width": "container",
+  "height": 300,
+
   "data": {
     "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/docs/data/percent-forest-cover_clean.csv",
     "format": {"type": "csv"}
@@ -21,91 +24,56 @@
     {"name": "box_w", "value": 400}
   ],
 
-  "vconcat": [
+  "projection": {"type": "equalEarth"},
+  "layer":[
     {
-      "width": 800,
-      "height": 400,
-      "projection": {"type": "equalEarth"},
-      "layer":[
+      "data": {
+        "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/DataViz2_clean/js/ne_110m_admin_0_countries.topojson",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
+      "transform": [
         {
-          "data": {
-            "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/DataViz2_clean/js/ne_110m_admin_0_countries.topojson",
-            "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
-          },
-          "transform": [
-            {
-              "calculate": "'Data is not available in ' + datum.properties.NAME",
-              "as": "note"
-            }
-          ],
-          "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "darkgray"},
-          "encoding": {"tooltip": {"field": "note"}}
-        },
-        {
-          "transform": [
-            {
-              "lookup": "Country",
-              "from": {
-                "data": {
-                  "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/w8/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
-                  "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
-                },
-                "key": "properties.NAME"
-              },
-              "as": "geo"
-            },
-            {
-              "filter": "datum.Year == Year_select"
-            }
-          ],
-          "mark": {"type": "geoshape", "stroke": "#525252"},
-          "encoding": {
-            "shape": {"field": "geo", "type": "geojson"},
-            "color": {
-              "field": "Forestcover",
-              "type": "quantitative",
-              "title": "Forest Cover (%)",
-              "scale": {
-                "type": "linear", "range": ["#feffe0", "#00441b"],
-                "domain": [0,100]
-              }
-              },
-            "tooltip": [
-              {"field": "Country", "type": "nominal", "title": "Country"},
-              {"field": "Forestcover", "type": "quantitative", "title": "Forest cover", "format": ".2f"}        
-            ]
-          }
+          "calculate": "'Data is not available in ' + datum.properties.NAME",
+          "as": "note"
         }
-      ]
+      ],
+      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "darkgray"},
+      "encoding": {"tooltip": {"field": "note"}}
     },
     {
-      "width": 800,
-      "layer":[
+      "transform": [
         {
-          "transform": [{
-            "filter": "datum.Year == Year_select"
-          }],
-          "mark": {"type": "bar"},
-          "encoding": {
-            "x": {
-              "aggregate": "mean", 
-              "field": "Forestcover", 
-              "title": "Global Forest Cover (%)",
-              "stack": "normalize",
-              "scale": {"domain": [31, 35]}
+          "lookup": "Country",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/w8/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
+              "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
             },
-            "color": {
-              "aggregate": "mean",
-              "field": "Forestcover",
-              "scale": {
-                "type": "linear", "range": ["#feffe0", "#00441b"],
-                "domain": [32,34]
-              }
-
-            }
-          }
+            "key": "properties.NAME"
+          },
+          "as": "geo"
+        },
+        {
+          "filter": "datum.Year == Year_select"
         }
-      ]
+      ],
+      "mark": {"type": "geoshape", "stroke": "#525252"},
+      "encoding": {
+        "shape": {"field": "geo", "type": "geojson"},
+        "color": {
+          "field": "Forestcover",
+          "type": "quantitative",
+          "title": "Forest Cover (%)",
+          "scale": {
+            "type": "linear", "range": ["#feffe0", "#00441b"],
+            "domain": [0,100]
+          }
+          },
+        "tooltip": [
+          {"field": "Country", "type": "nominal", "title": "Country"},
+          {"field": "Forestcover", "type": "quantitative", "title": "Forest cover", "format": ".2f"}        
+        ]
+      }
     }
   ]
 }

@@ -1,24 +1,49 @@
-#graphs {
-	top:50px;
-	bottom: 50px; 
-	left: 50px;
-	right: 50px;
-	/*height: 1000px;
-	width: 800px;*/
+body {
+	background-color: rgb(197, 208, 189);
 }
 
-#text-div {
+.frontpage {
+	width: 800px;
+	background-color: white;
+	margin: auto;
+	padding: 50px;
+}
+
+.content_container {
+	width: 500px;
+	margin: auto; /* centers */
+}
+
+.graph {
+	width: 100%;
+}
+.graph-1-2 {
+	width: 50%;
+}
+.graph-1-3 {
+	width: 33.33%;
+}
+.graph-2-3 {
+	width: 66.67%;
+}
+
+.text {
 	position: relative;
-	top: 25px;
-	left: 25px;
-	right: 25px;
-	bottom: 25px;
-	/*height: 1000px;
-	width: 800px;*/
+	padding: 5px;
 }
 
 h1 {
     text-align: center;
     color: #00441b;
     font-size: 40px;
+}
+
+h2 {
+	text-align: center;
+	color: #00441b;
+	font-size: 20px;
+}
+
+p {
+	font-size: 12px;
 }

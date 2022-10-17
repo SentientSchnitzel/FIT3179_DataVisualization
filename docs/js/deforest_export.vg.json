@@ -1,11 +1,15 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {"text": "Forest Area as a percentage of Total Land Area", "anchor": "middle"},
-  
+  "title": {"text": "Net Traded Deforestation", "anchor": "middle"},
+
   "data": {
     "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/docs/data/net-deforestation-in-trade_clean.csv",
     "format": {"type": "csv"}
   },
+
+  "width": "container",
+  "height": 400,
+
   "params": [
     {
       "name": "Year_select",
@@ -17,65 +21,62 @@
         "step": 1,
         "name": "Year:  "
       }
-    },
-    {"name": "box_w", "value": 400}
+    }
   ],
 
-  "vconcat": [
+  "projection": {"type": "equalEarth"},
+  "layer":[
     {
-      "width": 800,
-      "height": 400,
-      "projection": {"type": "equalEarth"},
-      "layer":[
+      "data": {
+        "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/DataViz2_clean/js/ne_110m_admin_0_countries.topojson",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
+      "transform": [
         {
-          "data": {
-            "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/DataViz2_clean/js/ne_110m_admin_0_countries.topojson",
-            "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+          "calculate": "'Data is not available in ' + datum.properties.NAME",
+          "as": "note"
+        }
+      ],
+      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "darkgray"},
+      "encoding": {"tooltip": {"field": "note"}}
+    },
+    {
+      "transform": [
+        {
+          "lookup": "Country",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/w8/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
+              "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+            },
+            "key": "properties.NAME"
           },
-          "transform": [
-            {
-              "calculate": "'Data is not available in ' + datum.properties.NAME",
-              "as": "note"
-            }
-          ],
-          "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "darkgray"},
-          "encoding": {"tooltip": {"field": "note"}}
+          "as": "geo"
         },
         {
-          "transform": [
-            {
-              "lookup": "Country",
-              "from": {
-                "data": {
-                  "url": "https://raw.githubusercontent.com/SentientSchnitzel/FIT3179_DataVisualization/main/w8/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
-                  "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
-                },
-                "key": "properties.NAME"
-              },
-              "as": "geo"
-            },
-            {
-              "filter": "datum.Year == Year_select"
-            }
-          ],
-          "mark": {"type": "geoshape", "stroke": "#525252"},
-          "encoding": {
-            "shape": {"field": "geo", "type": "geojson"},
-            "color": {
-              "field": "net_traded_deforestation",
-              "type": "quantitative",
-              "title": "Net Traded Deforestation",
-              "scale": {
-                "type": "linear", "range": ["#FFE069", "#69FF6D"]
-              }
-              },
-            "tooltip": [
-              {"field": "Country", "type": "nominal", "title": "Country"},
-              {"field": "net_traded_deforestation", "type": "quantitative", "title": "Net Traded Deforestation", "format": ".0f"}        
-            ]
-          }
+          "filter": "datum.Year == Year_select"
         }
-      ]
+      ],
+      "mark": {"type": "geoshape", "stroke": "#525252"},
+      "encoding": {
+        "shape": {"field": "geo", "type": "geojson"},
+        "color": {
+          "field": "net_traded_deforestation",
+          "type": "quantitative",
+          "title": ["Net Traded" ,"Deforestation", "(Ha)"],
+          "scale": {
+            "type": "threshold",
+            "domain": [-50000, -10000, -2000, -1000, 0, 1000, 2000, 10000, 50000],
+            "range": ["#54bebe", "#7ac8c8", "#9ad3d2", "#b8dddc", "#d5e7e6", 
+                      "#f2d7d0", "#f0bdb0", "#eca391", "#e68973", "#de6e56"]
+                      
+          }
+          },
+        "tooltip": [
+          {"field": "Country", "type": "nominal", "title": "Country"},
+          {"field": "net_traded_deforestation", "type": "quantitative", "title": "Net Traded Deforestation", "format": ".0f"}        
+        ]
+      }
     }
   ]
 }
