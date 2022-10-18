@@ -1,20 +1,30 @@
+/* font-family: 'Domine', serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Roboto Mono', monospace; */
+
 body {
 	background-color: rgb(255, 255, 255);
+}
+
+body *{
+	font-family: 'Domine', serif;
 }
 
 h1 {
 	text-align: center;
 	color: black;
 	font-size: 40px;
+	font-family: "Roboto Mono", monospace;
 }
 
 h2 {
 	text-align: center;
 	color: black;
-	font-size: 26px;
+	font-size: 30px;
+	font-family: "Roboto Condensed", sans-serif;
 }
 
-h2 {
+h3 {
 	text-align: left;
 	color: black;
 	font-size: 20px;
@@ -63,9 +73,11 @@ p {
 }
 
 .text {
-	width: 100%;
+	margin: auto;
+	width: 90%;
 	position: relative;
 	padding: 5px;
+	text-align: justify;
 }
 
 .header {
@@ -78,17 +90,12 @@ p {
 	width: 100%;
 	padding: 1px 0;
 	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-bottom: 25px;
 	/* border-bottom: 5px solid #3a4339 ; */
 }
 
-.textbound {
-	margin: auto;
-	width: 70%;
-}
-
 .divider-inner {
-	width: 75%;
+	width: 20%;
 	padding: 1px 0;
 	border-bottom: 3px solid black ;
 	margin: auto;
@@ -98,6 +105,23 @@ p {
 	width: 100%;
 	padding: 1px 0;
 	border-bottom: 2px solid black ;
+}
+
+.textbound {
+	margin: auto;
+	width: 70%;
+}
+
+.textCols2 {
+	/* margin: auto; */
+	column-count: 2;
+	text-align: justify;
+	column-gap: 40px;
+}
+
+#link {
+	color: rgb(73, 73, 73);
+	font-size: 10px;
 }
 
 #whiteHeader {

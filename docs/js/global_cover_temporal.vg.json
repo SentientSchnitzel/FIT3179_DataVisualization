@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {"text": ["Temporal view of Forest Area as a", "percentage of Total Land Area"], "anchor": "middle"},
+  "title": {"text": ["30 Years of Forest Cover"], "anchor": "middle"},
 
   "width": "container",
   "height": "container",
@@ -10,20 +10,57 @@
     "format": {"type": "csv"}
   },
 
-  "mark": {"type": "line", "color": "#488360"},
-  "encoding": {
-    "x": {
-      "field": "Year", 
-      "type": "temporal", 
-      "axis": {"tickCount": 9}
+  "layer": [
+    {
+      "mark": {"type": "line", "color": "#5eae5e"},
+      "encoding": {
+        "x": {
+          "field": "Year", 
+          "type": "temporal", 
+          "axis": {"tickCount": 9}
+        },
+        "y": {
+          "aggregate": "average", 
+          "field": "Forestcover", 
+          "type": "quantitative",
+          "title": "Forest Cover (%)",
+          "scale": {"domain": [15,65]}
+        },
+        "color":{"datum": "Global", "type": "nominal", "scale": {"range": ["#69bd69", "#874b39", "#3e549c"]}}
+      }
     },
-    "y": {
-      "aggregate": "average", 
-      "field": "Forestcover", 
-      "type": "quantitative",
-      "scale": {"domain": [30,35]}
+    {
+      "transform": [{"filter": "datum.Country == 'China'"}],
+      "mark": {"type": "line", "color": "#873f39"},
+      "encoding": {
+        "x": {
+          "field": "Year", 
+          "type": "temporal"
+        },
+        "y": {
+          "field": "Forestcover", 
+          "type": "quantitative"
+        },
+        "color":{"datum": "China", "type": "nominal"}
+      }
+    },
+    {
+      "transform": [{"filter": "datum.Country == 'Indonesia'"}],
+      "mark": {"type": "line", "color": "#495ea2"},
+      "encoding": {
+        "x": {
+          "field": "Year", 
+          "type": "temporal"
+        },
+        "y": {
+          "field": "Forestcover", 
+          "type": "quantitative"
+        },
+        "color":{"datum": "Indonesia", "type": "nominal"}
+      }
     }
-  },
+  ],
+
   "config": {
     "style": {
       "cell": {
