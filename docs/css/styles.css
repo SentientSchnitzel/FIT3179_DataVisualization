@@ -34,16 +34,21 @@ p {
 	font-size: 14px;
 }
 
+bold {
+	font-weight: bold;
+}
+
+
 .whitepage {
 	width: 1200px;
-	background-color: rgb(255, 255, 255);
+	/* background-color: rgb(255, 255, 255); */
 	margin: auto;
 	padding-top: 50px;
 }
 
 .frontpage {
 	width: 1200px;
-	background-color: rgb(255, 255, 255);
+	/* background-color: rgb(255, 255, 255); */
 	margin: auto;
 	/* padding: 50px; */
 	padding-top: 25px;
